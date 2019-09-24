@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background: #eee;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +11,91 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#main h1{
+  color: #444;
+  text-align: center;
+}
+
+#main{
+  padding: 0px;
+  box-sizing: border-box;
+  width: 60%;
+  height: 100%
+}
+
+#book-list_{
+  padding: 0;
+}
+
+#book-list li{
+  display: inline-block;
+  border-radius: 4px;
+  padding: 15px;
+  border: 1px solid #880e4f;
+  margin: 10px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0,3);
+  cursor: pointer;
+  color: #880E4F;
+}
+
+#book-list #delete-button{
+  color: #880E4F;
+  padding: 5px;
+  margin-left: 8px;
+  border: 10px;
+  border-radius: 5px;
+  border-color: black;
+  cursor: pointer;
+}
+
+form{
+  background: #fff;
+  padding: 20px;
+  position: fixed;
+  width: 300px;
+  bottom: 0;
+}
+
+form .field{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+form label{
+  text-align: right;
+  padding: 10px;
+}
+
+form select{
+  margin: 4px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+form button{
+  color: #fff;
+  font-size: 2em;
+  background: #ad1457;
+  border: 0;
+  padding: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5px
+}
+
+#book-details{
+  position: fixed;
+  right:0;
+  top:0;
+  width: 40%;
+  height: 100%;
+  background: #ad1457;
+  padding: 30px;
+  overflow: auto;
+  box-shadow: -2px -3px -5px rgba(0,0,0,0,3);
+  box-sizing: border-box;
+  color: #fff
 }

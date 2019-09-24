@@ -6,7 +6,6 @@ const Author = require('../models/authorModel');
 // schema describes the graph
 // describes object types, relations
 // how to reach particular data, mutate it, etc.
-
 const { 
     GraphQLObjectType, 
     GraphQLString, 
@@ -124,6 +123,16 @@ const Mutation = new GraphQLObjectType({
                     authorId: args.authorId
                 });
                 return book.save();
+            }
+        },
+        deleteBook: {
+            type: BookType,
+            args: {
+                id : { type: new GraphQLNonNull(GraphQLID)}
+            },
+            async resolve(parent, { id }) {
+               const deleteBook = await Book.findByIdAndRemove(id)
+               return {id: deleteBook.id}
             }
         }
     }
